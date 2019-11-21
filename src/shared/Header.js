@@ -4,7 +4,7 @@ export default function Header() {
   return (
     <nav className="navbar navbar-dark navbar-expand-lg">
       <div className="container">
-        <a className="navbar-brand" href="">
+        <a className="navbar-brand" href="# ">
           YarshaaDHN
         </a>
         <form className="form-inline my-2 my-lg-0">
@@ -34,10 +34,10 @@ export default function Header() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav ml-auto">
-            <a className="nav-item nav-link active" href="">
+            <a className="nav-item nav-link active" href="# ">
               Login <span className="sr-only">(current)</span>
             </a>
-            <a className="nav-item nav-link" href="">
+            <a className="nav-item nav-link" href="# ">
               SignUp
             </a>
           </div>
