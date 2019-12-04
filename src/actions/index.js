@@ -1,4 +1,8 @@
-import { FETCH_RENTALS, FETCH_RENTAL_BY_ID_SUCCESS } from "./types";
+import {
+  FETCH_RENTALS,
+  FETCH_RENTAL_BY_ID_SUCCESS,
+  FETCH_RENTAL_BY_ID_INIT
+} from "./types";
 
 //actions are objects
 const rentals = [
@@ -70,6 +74,20 @@ const rentals = [
   }
 ];
 
+//actionCreator
+const fetchRentalsByIdInit = () => {
+  return {
+    type: FETCH_RENTAL_BY_ID_INIT
+  };
+};
+
+const fetchRentalByIdSuccess = rental => {
+  return {
+    type: FETCH_RENTAL_BY_ID_SUCCESS,
+    rental: rental
+  };
+};
+
 export const fetchRentals = () => {
   return {
     type: FETCH_RENTALS,
@@ -77,10 +95,11 @@ export const fetchRentals = () => {
   };
 };
 
-export const fetchRentalsById = rentalId => {
+export const fetchRentalById = rentalId => {
   // SEND REQUEST TO SERVER, ASYNC CODE HERE ...
 
   return function(dispatch) {
+    dispatch(fetchRentalsByIdInit());
     //SIMULATE SERVER CALL
     setTimeout(() => {
       const rental = rentals.find(rental => rental.id.toString() === rentalId);
@@ -90,12 +109,5 @@ export const fetchRentalsById = rentalId => {
       type: FETCH_RENTALS_BY_ID,
       rental: rental
     }; */
-  };
-};
-
-const fetchRentalByIdSuccess = rental => {
-  return {
-    type: FETCH_RENTAL_BY_ID_SUCCESS,
-    rental: rental
   };
 };
