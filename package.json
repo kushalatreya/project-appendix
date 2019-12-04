@@ -24,7 +24,7 @@
     "build-css": "node-sass-chokidar ./src -o ./src",
     "watch-css": "npm run build-css && node-sass-chokidar ./src -o ./src --watch --recursive",
     "start-js": "react-scripts start",
-    "build-js": "react-scripts buil"
+    "build-js": "react-scripts build"
   },
   "eslintConfig": {
     "extends": "react-app"
