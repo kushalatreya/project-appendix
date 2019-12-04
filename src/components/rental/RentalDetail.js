@@ -1,13 +1,39 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class RentalDetail extends Component {
+import { connect } from "react-redux";
+
+import * as actions from "../../actions";
+
+class RentalDetail extends React.Component {
+  componentWillMount() {
+    //Dispatch action
+
+    const rentalId = this.props.match.params.id;
+    this.props.dispatch(actions.fetchRentalsById(rentalId));
+  }
+
   render() {
-    console.log(this.props.match.params.id);
+    // console.log(this.props.match.params.id);
     // debugger;
-    return (
-      <div>
-        <h1>I am Rental Detail Component {this.props.match.params.id} </h1>
-      </div>
-    );
+    const rental = this.props.rental;
+    // TODO: always true as rental is empty obj. passing rental.id throws err. if found no id (make err msg) either from routing or in here.
+    if (rental.id) {
+      return (
+        <div>
+          <h1>I am {rental.title} </h1>
+          <h1>I am Rs: {rental.dailyRate} </h1>
+          <h1>I am {rental.category} </h1>
+        </div>
+      );
+    } else {
+      return <h1>Loading ..</h1>;
+    }
   }
 }
+function mapStateToProps(state) {
+  return {
+    rental: state.rental.data
+  };
+}
+
+export default connect(mapStateToProps)(RentalDetail);
