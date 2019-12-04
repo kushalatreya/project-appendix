@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import Header from "./shared/Header";
-import RentalList from "./components/rental/RentalList";
-import RentalDetail from "./components/rental/RentalDetail";
+import RentalList from "./components/rental/rental-listing/RentalList";
+import RentalDetail from "./components/rental/rental-details/RentalDetail";
 
 import { init } from "./reducers/index";
 
