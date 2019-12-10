@@ -24,3 +24,5 @@ yarn-error.log*
 
 # ignoring all css files as there are scss files.
 /src/**/*.css
+
+/server/config/dev.js
