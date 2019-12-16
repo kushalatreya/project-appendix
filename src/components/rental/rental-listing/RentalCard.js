@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { rentalType } from "../../../../src/helpers/index";
 
 export default function RentalCard(props) {
   const rental = props.rental;
@@ -14,8 +15,7 @@ export default function RentalCard(props) {
           ></img>
           <div className="card-block">
             <h6 className={`card-subtitle ${rental.category}`}>
-              {rental.shared ? "shared" : "whole"} {rental.category} &#183;{" "}
-              {rental.city}
+              {rentalType(rental.shared)} {rental.category} &#183; {rental.city}
             </h6>
             <h4 className="card-title">{rental.title}</h4>
             <p className="card-text">
