@@ -17,11 +17,11 @@ class RentalDetail extends React.Component {
     // debugger;
     const rental = this.props.rental;
     // TODO: always true as rental is empty obj. passing rental.id throws err. if found no id (make err msg) either from routing or in here.
-    if (rental.id) {
+    if (rental._id) {
       return (
         <div>
           <h1>I am {rental.title} </h1>
-          <h1>I am Rs: {rental.dailyRate} </h1>
+          <h1>I am Rs: {rental.dailyRate * 30} </h1>
           <h1>I am {rental.category} </h1>
         </div>
       );
