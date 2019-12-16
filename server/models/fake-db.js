@@ -10,7 +10,8 @@ class FakeDb {
         category: "apartment",
         image: "http://via.placeholder.com/350x250",
         bedrooms: 3,
-        description: "Very nice apartment",
+        description:
+          "Very nice apartment Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, laudantium! ",
         dailyRate: 340,
         shared: false
       },
@@ -21,9 +22,10 @@ class FakeDb {
         category: "condo",
         image: "http://via.placeholder.com/350x250",
         bedrooms: 2,
-        description: "Very nice apartment",
-        dailyRate: 120,
-        shared: true
+        description:
+          "Very nice apartment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illum ad necessitatibus eos, veniam nihil dolor doloribus. Mollitia, quam natus.",
+        dailyRate: 220,
+        shared: false
       },
       {
         title: "Central Apartment ",
@@ -32,8 +34,9 @@ class FakeDb {
         category: "condo",
         image: "http://via.placeholder.com/350x250",
         bedrooms: 2,
-        description: "Very nice apartment",
-        dailyRate: 334,
+        description:
+          "Very nice apartment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illum ad necessitatibus eos, veniam nihil dolor doloribus. Mollitia, quam natus.",
+        dailyRate: 534,
         shared: true
       },
       {
@@ -42,9 +45,10 @@ class FakeDb {
         street: "Nachhen Galli, Kathmandu 44600, Nepal",
         category: "house",
         image: "http://via.placeholder.com/350x250",
-        bedrooms: 9,
-        description: "Very nice apartment",
-        dailyRate: 330,
+        bedrooms: 4,
+        description:
+          "Very nice apartment. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illum ad necessitatibus eos, veniam nihil dolor doloribus. Mollitia, quam natus.Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illum ad necessitatibus eos, veniam nihil dolor doloribus. Mollitia, quam natus.",
+        dailyRate: 950,
         shared: true
       },
 
@@ -54,9 +58,9 @@ class FakeDb {
         street: "MakkhanLal, Kathmandu, Nepal",
         category: "house",
         image: "http://via.placeholder.com/350x250",
-        bedrooms: 9,
+        bedrooms: 3,
         description: "Very nice apartment",
-        dailyRate: 330,
+        dailyRate: 930,
         shared: true
       }
     ];
