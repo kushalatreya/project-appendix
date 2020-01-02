@@ -19,7 +19,9 @@ const rentalSchema = new Schema({
   shared: Boolean,
   description: { type: String, required: true },
   dailyRate: Number,
-  createdAt: { type: Date, default: Date.now }
+  createdAt: { type: Date, default: Date.now },
+  /* each rental must have a user, user can have multiple rentals. Rental can have just one user. */
+  user: { type: Schema.Types.ObjectId, ref: "User" }
 });
 
 module.exports = mongoose.model("Rental", rentalSchema);
