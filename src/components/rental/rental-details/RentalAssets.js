@@ -1,5 +1,5 @@
 import React from "react";
-
+//TODO: mapping-object.
 export default function RentalAssets() {
   return (
     <div>
